@@ -7,3 +7,4 @@
 - Miray Nivolana
 - Rakotoarinelina Jessarel
 - Anjaramandresy Miandry Finiavana
+- RAZANATSOA Aimé Freddy
