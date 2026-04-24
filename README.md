@@ -1,4 +1,10 @@
 # ambitious-crew-project
 
 # Membre de l'equipe
- - Tiaheranto Tiaheranto
+
+- Tiaheranto Tiaheranto
+- Rakotoniaina Mirandy
+- Miray Nivolana
+- Rakotoarinelina Jessarel
+- Anjaramandresy Miandry Finiavana
+- RAZANATSOA Aimé Freddy
