@@ -4,3 +4,4 @@
 
 - Tiaheranto Tiaheranto
 - Rakotoniaina Mirandy
+- Miray Nivolana
