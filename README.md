@@ -6,3 +6,4 @@
 - Rakotoniaina Mirandy
 - Miray Nivolana
 - Rakotoarinelina Jessarel
+- Anjaramandresy Miandry Finiavana
