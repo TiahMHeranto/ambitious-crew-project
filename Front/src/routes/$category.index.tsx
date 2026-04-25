@@ -70,7 +70,7 @@ export const Route = createFileRoute("/$category/")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${CATEGORY_LABEL[loaderData.category]} — Wikidia` },
+          { title: `${CATEGORY_LABEL[loaderData.category]} — NovaPedia` },
           {
             name: "description",
             content: DESCRIPTIONS[loaderData.category],

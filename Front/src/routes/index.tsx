@@ -9,11 +9,11 @@ import chercheurImg from "@/assets/category-chercheur.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Wikidia — L'encyclopédie pour tous" },
+      { title: "NovaPedia — L'encyclopédie pour tous" },
       {
         name: "description",
         content:
-          "Wikidia, l'encyclopédie libre adaptée aux enfants, explorateurs et chercheurs.",
+          "NovaPedia, l'encyclopédie libre adaptée aux enfants, explorateurs et chercheurs.",
       },
     ],
   }),
@@ -28,7 +28,7 @@ function Index() {
         {/* Hero */}
         <div className="text-center">
           <h1 className="text-5xl font-normal tracking-tight text-foreground">
-            Bienvenue sur <span className="font-semibold">Wikidia</span>
+            Bienvenue sur <span className="font-semibold">NovaPedia</span>
           </h1>
           <p className="mt-3 text-base text-muted-foreground wiki-sans">
             L'encyclopédie libre que{" "}
@@ -180,7 +180,7 @@ function Index() {
         </section>
 
         <footer className="mt-16 border-t border-border pt-6 text-center text-xs text-muted-foreground wiki-sans">
-          Wikidia — projet de démonstration. Texte sous licence libre Creative Commons.
+          NovaPedia — projet de démonstration. Texte sous licence libre Creative Commons.
         </footer>
       </main>
     </div>

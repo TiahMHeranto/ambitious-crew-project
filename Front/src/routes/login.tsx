@@ -14,7 +14,7 @@ export const Route = createFileRoute("/login")({
       search.action === "edit" || search.action === "delete" ? search.action : undefined,
   }),
   head: () => ({
-    meta: [{ title: "Connexion — Wikidia" }],
+    meta: [{ title: "Connexion — NovaPedia" }],
   }),
   component: LoginPage,
 });
@@ -35,7 +35,7 @@ function LoginPage() {
       <main className="mx-auto max-w-md px-4 py-12">
         <div className="border border-border bg-card p-6 shadow-sm rounded-sm">
           <h1 className="text-2xl font-normal border-b border-border pb-2">
-            {isLogin ? "Connexion à Wikidia" : "Créer un compte Wikidia"}
+            {isLogin ? "Connexion à NovaPedia" : "Créer un compte NovaPedia"}
           </h1>
 
           {/* Onglets */}

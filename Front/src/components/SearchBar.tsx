@@ -34,7 +34,7 @@ export function SearchBar({ restrictTo, placeholder }: Props) {
             setOpen(true);
           }}
           onFocus={() => setOpen(true)}
-          placeholder={placeholder ?? "Rechercher dans Wikidia"}
+          placeholder={placeholder ?? "Rechercher dans NovaPedia"}
           className="flex-1 border border-border bg-background px-4 py-2.5 text-base outline-none focus:border-primary focus:ring-1 focus:ring-ring"
         />
         <button

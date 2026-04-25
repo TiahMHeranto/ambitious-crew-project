@@ -33,7 +33,7 @@ export const Route = createFileRoute("/$category/$slug")({
     meta: loaderData
       ? [
           {
-            title: `${loaderData.article.title} (${CATEGORY_LABEL[loaderData.category]}) — Wikidia`,
+            title: `${loaderData.article.title} (${CATEGORY_LABEL[loaderData.category]}) — NovaPedia`,
           },
           { name: "description", content: loaderData.article.summary.slice(0, 160) },
         ]
@@ -448,7 +448,7 @@ function ResearcherView({
       <section className="mt-8 border-t border-border pt-4 text-xs text-muted-foreground wiki-sans">
         <p>
           Cet article est publié sous licence libre Creative Commons. Dernière modification :
-          aujourd'hui à 14:32 par <span className="text-primary">Wikidia-bot</span>.
+          aujourd'hui à 14:32 par <span className="text-primary">NovaPedia-bot</span>.
         </p>
       </section>
     </div>

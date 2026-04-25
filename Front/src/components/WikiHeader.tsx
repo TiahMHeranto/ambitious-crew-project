@@ -6,7 +6,7 @@ type BackTo =
   | { to: "/$category"; params: { category: string } };
 
 type Props = {
-  /** Si défini, affiche un bouton "Retour" à la place du logo Wikidia */
+  /** Si défini, affiche un bouton "Retour" à la place du logo NovaPedia */
   back?: { label: string } & BackTo;
 };
 
@@ -35,7 +35,7 @@ export function WikiHeader({ back }: Props) {
           )
         ) : (
           <Link to="/" className="text-lg font-bold tracking-tight text-foreground">
-            Wiki<span className="text-primary">dia</span>
+            Nova<span className="text-primary">Pedia</span>
           </Link>
         )}
         <nav className="flex items-center gap-4 text-sm">
