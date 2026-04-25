@@ -7,8 +7,6 @@ from app.models.article import Article
 from app.models.category import Category
 from app.models.article_category import article_category
 
-
-
 app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
@@ -24,4 +22,5 @@ def test_db():
         return {"database": "connected", "result": result.scalar()}
     
 app.include_router(auth_router)
+app.include_router(category_router)
         
