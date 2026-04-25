@@ -1,5 +1,9 @@
-from fastapi import HTTPException, Depends
+from fastapi import HTTPException, Depends, status
+from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
+from jose import JWTError, jwt
+import os
+
 from app.models.user import User
 from app.schemas.user import RegisterSchema, LoginSchema
 from app.utils.security import (
@@ -10,6 +14,22 @@ from app.utils.security import (
 from app.database.database import get_db
 
 
+# =========================
+# JWT Config (.env or fallback)
+# =========================
+SECRET_KEY = os.getenv("SECRET_KEY", "supersecretkey")
+ALGORITHM = os.getenv("ALGORITHM", "HS256")
+
+
+# =========================
+# OAuth2 Bearer Token
+# =========================
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
+
+
+# =========================
+# Register User
+# =========================
 def register_user(data: RegisterSchema, db: Session):
 
     existing = db.query(User).filter(
@@ -36,6 +56,9 @@ def register_user(data: RegisterSchema, db: Session):
     return {"message": "User created successfully"}
 
 
+# =========================
+# Login User
+# =========================
 def login_user(data: LoginSchema, db: Session):
 
     user = db.query(User).filter(
@@ -64,3 +87,42 @@ def login_user(data: LoginSchema, db: Session):
         "access_token": token,
         "token_type": "bearer"
     }
+
+
+# =========================
+# Get Current User
+# =========================
+def get_current_user(
+    token: str = Depends(oauth2_scheme),
+    db: Session = Depends(get_db)
+):
+
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Invalid or expired token",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+
+    try:
+        payload = jwt.decode(
+            token,
+            SECRET_KEY,
+            algorithms=[ALGORITHM]
+        )
+
+        user_id = payload.get("id")
+
+        if user_id is None:
+            raise credentials_exception
+
+    except JWTError:
+        raise credentials_exception
+
+    user = db.query(User).filter(
+        User.id == user_id
+    ).first()
+
+    if user is None:
+        raise credentials_exception
+
+    return user
