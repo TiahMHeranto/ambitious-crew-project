@@ -37,6 +37,9 @@ function Index() {
             </Link>
             .
           </p>
+          <Link to="/article/create" className="wiki-link">
+            <h1>Nouvel article</h1>
+          </Link>
           <p className="mt-2 text-sm text-muted-foreground wiki-sans">
             <strong>14 268</strong> articles en français · <strong>3</strong> niveaux de lecture
             adaptés
