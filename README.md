@@ -3,7 +3,7 @@
 # Membre de l'equipe
 
 - Tiaheranto Tiaheranto
-- Rakotoniaina Mirandy
+- Rakotoniaina Mirandy Tianasoa
 - Miray Nivolana
 - Rakotoarinelina Jessarel
 - Anjaramandresy Miandry Finiavana
