@@ -22,7 +22,7 @@ class ArticleResponse(ArticleBase):
     id: int
     author_id: int
     created_at: datetime
-    updated_at: datetime
+    updated_at: Optional[datetime] = None  # ← Changement ici: ajouter Optional et = None
     categories: List[CategoryResponse] = []
 
     class Config:
