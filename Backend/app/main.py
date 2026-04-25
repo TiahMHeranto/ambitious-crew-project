@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from sqlalchemy import text
 from .database.database import engine, Base
 from app.routes.auth import router as auth_router
+from app.routes.category import router as category_router
 
 app = FastAPI()
 
@@ -18,4 +19,5 @@ def test_db():
         return {"database": "connected", "result": result.scalar()}
     
 app.include_router(auth_router)
+app.include_router(category_router)
         
