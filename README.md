@@ -26,7 +26,6 @@ Important:
 - RAZANATSOA Aime Freddy
 
 ## Main Features
-
 - Category-based encyclopedia navigation (`enfant`, `explorateur`, `chercheur`)
 - Dynamic article page by URL slug (`/$category/$slug`)
 - Text-to-speech buttons in several content areas
