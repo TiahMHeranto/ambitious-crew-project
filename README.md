@@ -18,11 +18,11 @@ Important:
 
 ## Team Members
 
-- Tiaheranto Tiaheranto
-- Rakotoniaina Mirandy Tianasoa
-- Miray Nivolana
-- Rakotoarinelina Jessarel
-- Anjaramandresy Miandry Finiavana
+- TIAHERANTO Mandaniaina
+- RAKOTONIAINA Mirandy Tianasoa
+- SAHONDRAHARIVONY Miray Nivolana
+- RAKOTOARINELINA Jessarel Fidèl
+- ANJARAMANDRESY Miandry Finiavana
 - RAZANATSOA Aime Freddy
 
 ## Main Features
